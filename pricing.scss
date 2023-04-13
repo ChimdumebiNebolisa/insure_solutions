@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;600&family=Outfit:wght@400;700&display=swap');
+
+* {
+  line-height: 1.5;
+  font-family: 'Mulish', sans-serif;
+}
+
+.hidden{
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100%);
+  filter: blur(5px);
+  transition: all 0.8s;
+}
+  
+  
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0%);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden:not(.inv-bubble) {
+    transition: none;
+  }
+}
+
+.logo {
+    color: #F957B0;
+  }
+  
+  .logospan {
+    color: #1D9BF0;
+  }
+  
+  .logo:hover {
+    color: #1D9BF0;
+  }
+  
+  .logospan:hover {
+    color: #F957B0;
+  }
+
+  body {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+  /* Set the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Set the color of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #F957B0;
+}
+
+/* Set the color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+/* For Firefox */
+* {
+  scrollbar-color: #F957B0 #f5f5f5;
+  scrollbar-width: thin;
+}
+
+  

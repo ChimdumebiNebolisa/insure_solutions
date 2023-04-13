@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>InSure Solutions - Insurance at your fingertips</title>
+
+  <link rel="shortcut icon" href="assets/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="index.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <script defer src="fadescroll.js"></script>
+
+  <script src="chat.js"></script>
+
+</head>
+
+<body>
+
+  <!--Scripts-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <!--Cookie alert-->
+
+  <div>
+    <div class="cookie-alert fixed-bottom text-light text-center rounded-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-9">
+            This website uses cookies to ensure you get the best experience on our website. <a href="#" class="alert-link text-light" data-toggle="modal" data-target="#terms-modal">Learn more</a>
+          </div>
+          <div class="col-12 col-md-3">
+            <button id="cookie-btn" type="button" class="btn rounded-0">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <style>
+      
+      .close {
+        background-color: #F957B0;
+        border: none;
+        padding: 10px;
+        border-radius: 50px;
+      }
+
+      .cookie-alert {
+        background-color: #F957B0;
+      }
+      #cookie-btn {
+        color: white;
+        font-weight: bolder;
+      }
+      #cookie-btn:hover {
+        background-color: white;
+        color: #F957B0;
+        font-weight: bolder;
+      }
+      .cookie-alert {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+      }
+      @media (min-width: 768px) {
+        .cookie-alert {
+          border-radius: 0;
+        }
+      }
+    </style>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="terms-modal" tabindex="-1" role="dialog" aria-labelledby="terms-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="terms-modal-label">Terms and Conditions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>By using this website, you agree to our terms and conditions.</p>
+            <p>Our insurance policies are subject to the terms and conditions outlined in the policy document. Please read the policy document carefully before purchasing any insurance policy.</p>
+            <p>If you have any questions or concerns, please contact us.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      var cookieAlert = document.querySelector('.cookie-alert');
+      var cookieBtn = document.querySelector('#cookie-btn');
+      cookieBtn.addEventListener('click', function () {
+        cookieAlert.style.display = 'none';
+      });
+    </script>
+  </div>
+
+  <!--Responsive Navigation Bar-->
+
+  <div>
+
+    <nav class="fw-bold navbar expand-lg body-tertiary p-3 mb-2 bg-white">
+
+      <div class="container-fluid">
+
+        <a class="navbar-brand logo" href="index.html">In<span class="logospan">Sure Solutions</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+          <div class="navbar-nav">
+
+            <a class="nav-link " href="about.html">About</a>
+
+            <a class="nav-link" href="pricing.html">Pricing</a>
+
+            <a class="nav-link" href="contact.html">Contact</a>
+
+          </div>
+
+          <style>
+            .nav-link:hover {
+              opacity: 2;
+              color: #1D9BF0;
+            }
+          </style>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </div>
+
+  <!--first-container-->
+
+  <div class="hidden custom-shape-divider-top-1680595223">
+
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path
+        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+        opacity=".25" class="shape-fill"></path>
+      <path
+        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+        opacity=".5" class="shape-fill"></path>
+      <path
+        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+        class="shape-fill"></path>
+    </svg>
+
+    <div class="b container-fluid f">
+
+      <div class="row ps-md-3">
+
+        <div class="section col-md-4 mt-lg-5">
+
+          <h2 class="fw-bold c">
+
+            Ensuring <span class="text-decoration-underline">Your</span> <br>
+
+            <span class="fw-bolder">
+
+              <span id="headline">
+
+              </span>
+
+            </span>
+
+          </h2>
+          
+          <a href="pricing.html" class="btn btn-lg ps-5 pe-5 rounded-pill mt-4">More</a>
+        </div>
+
+        <div class="sectionimg col">
+
+          <img class="floating-image img-fluid" src="assets/13744786_Mar-Business_11.jpg" alt="contract"
+            style="width: 600px; height: 400px;">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <style>
+      #headline {
+        color: #F957B0;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        .b {
+          text-align: center;
+          margin-left: 390px;
+          display: grid;
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+
+        .img-fluid {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 1150px) {
+        .b {
+          text-align: center;
+          margin-left: 330px;
+          display: grid;
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+
+        .img-fluid {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 950px) {
+        .b {
+          text-align: center;
+          margin-left: 280px;
+          display: grid;
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+
+        .img-fluid {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 800px) {
+        .b {
+          text-align: center;
+          margin-left: 240px;
+          display: grid;
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+
+        .img-fluid {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 770px) {
+        .b {
+          text-align: center;
+          margin-left: 10px;
+          display: grid;
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+
+        .img-fluid {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 700px) {
+        .b {
+          margin: auto;
+          padding: auto;
+        }
+
+
+        .img-fluid {
+          display: hidden;
+        }
+      }
+
+      .floating-button a {
+        text-decoration: none;
+      }
+
+      :root {
+        --primary-color: #F957B0;
+      }
+
+      .floating-image {
+        animation-name: float;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        max-width: 70%;
+        width: 70%;
+      }
+
+      .floating-button {
+        animation-name: float;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+
+      .floating-button:hover {
+        background-color: #ffa4d6;
+        border-color: #ffa4d6;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .floating-image {
+          max-width: 50%;
+          width: 50%;
+        }
+      }
+    </style>
+
+    <script>
+      // Define the headline text
+      const headlineText = "Future Dreams";
+
+      // Get the headline element
+      const headlineElement = document.getElementById("headline");
+
+      // Define the typing speed (in milliseconds)
+      const typingSpeed = 10;
+
+      // Define the delay between each character (in milliseconds)
+      const delayBetweenChars = 100;
+
+      // Define the initial delay (in milliseconds)
+      const initialDelay = 100;
+
+      // Define the current position of the typing animation
+      let currentPos = 0;
+
+      // Define the function that types the headline
+      function typeHeadline() {
+        // Check if all characters have been typed
+        if (currentPos >= headlineText.length) {
+          return;
+        }
+
+        // Get the current character to type
+        const currentChar = headlineText.charAt(currentPos);
+
+        // Add the current character to the headline element
+        headlineElement.innerHTML += currentChar;
+
+        // Update the current position
+        currentPos++;
+
+        // Schedule the next character to be typed
+        setTimeout(typeHeadline, delayBetweenChars);
+      }
+
+      // Schedule the initial typing animation
+      setTimeout(typeHeadline, initialDelay);
+    </script>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+  </div>
+
+  <!--container-strip-->
+
+  <div class="hidden">
+
+    <div class="companies">
+
+      <h2 class="p-3 fw-bolder text-decoration-underline">Companies that use our services:</h2>
+
+      <div class="logopa">
+
+        <div class="logop hidden">
+          <img src="assets/google-logo.svg" alt="Company 1">
+        </div>
+
+        <div class="logop hidden">
+          <img src="assets/facebook-logo.svg" alt="Company 2">
+        </div>
+
+        <div class="logop hidden">
+          <img src="assets/apple-logo.svg" alt="Company 3">
+        </div>
+
+        <div class="logop hidden">
+          <img src="assets/microsoft-logo.svg" alt="Company 4">
+        </div>
+
+      </div>
+
+    </div>
+
+    <style>
+      .companies {
+        margin: 0 auto;
+        padding: 40px 0;
+        text-align: center;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        animation: float 3s ease-in-out infinite, shine 3s linear infinite;
+        /* add animations */
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes shine {
+        0% {
+          background-position: -200px 0;
+          /* initial position */
+        }
+
+        100% {
+          background-position: calc(100% + 1200px) 0;
+          /* move to end of element + 200px */
+        }
+      }
+
+      .logopa {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      .logop {
+        width: 150px;
+        height: 75px;
+        margin: 20px;
+        border-radius: 5px;
+        /* add border radius */
+        overflow: hidden;
+        /* add overflow to hide image overflow */
+      }
+
+      .logop img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease-in-out;
+        /* add transition */
+      }
+
+      .logop:hover img {
+        transform: scale(1.1);
+        /* add hover effect */
+      }
+    </style>
+
+    <br><br><br><br><br><br><br>
+
+  </div>
+
+  <!--second-container-->
+
+  <div class="hidden">
+
+    <div class="container my-5">
+
+      <h2 class="text-center fw-bold mb-5 text-decoration-underline">Flexible Options at Low Rates</h2>
+
+      <div class="me-4 row row-cols-1 row-cols-lg-3 g-4">
+
+        <div class="col hidden">
+          <div class="card h-100 shadow-lg">
+            <img height="100%" src="assets/undraw_personal_file_re_5joy.svg" class="card-img-top p-4" alt="Contract-friendly">
+            <div class="card-body text-center">
+              <h3 class="card-title fw-bold mb-3">Contract-friendly</h3>
+              <p class="card-text">Our contracts are designed specifically to avoid any confusion and ensure you
+                understand your coverage fully. Say goodbye to complicated legal jargon!</p>
+              <a href="pricing.html" class="btn btn-lg">Check Pricing</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col hidden">
+          <div class="card h-100 shadow-lg">
+            <img height="100%" src="assets/undraw_contrast_re_hc7k.svg" class="card-img-top p-4" alt="Designed to stand out">
+            <div class="card-body text-center mt-3">
+              <h3 class="card-title fw-bold mb-3">Designed to Stand Out</h3>
+              <p class="card-text">We take pride in our world-class support team and affordable pricing options. Let us
+                help you find the perfect insurance coverage for all of your needs.</p>
+              <a href="pricing.html" class="btn btn-lg">Check Pricing</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col hidden">
+          <div class="card h-100 shadow-lg">
+            <img height="100%"  src="assets/undraw_term_sheet_re_ju7s.svg" class="card-img-top p-4" alt="Clear-cut analytics">
+            <div class="card-body text-center">
+              <h3 class="card-title fw-bold mb-4">Expert Analytics</h3>
+              <p class="card-text">Our detailed insurance benefit analysis ensures you get the most value out of
+                your coverage. Our expert analysis department will help you make informed.</p>
+              <a href="pricing.html" class="btn btn-lg">Check Pricing</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <style>
+      .btn-lg {
+        background-color: #F957B0;
+        color: white;
+      }
+
+      .btn-lg:hover {
+        color: #F957B0;
+        background-color: white;
+        border: 2px solid #F957B0;
+      }
+
+      .card-img-top {
+        position: relative;
+        transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .card-img-top:before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        bottom: -20px;
+        right: -20px;
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"%3E%3Ccircle cx="100" cy="100" r="75" stroke="%23fff" stroke-width="3" fill="none" /%3E%3C/svg%3E');
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: -1;
+      }
+
+      .card-img-top:hover {
+        transform: scale(1.1);
+      }
+
+      .card-img-top:hover:before {
+        opacity: 1;
+      }
+    </style>
+
+  </div>
+
+  <!--third-container-->
+  <br><br><br><br><br>
+  <div class="hidden custom-shape-divider-top-1680903971">
+
+    
+    <br><br><br><br><br>
+    <div class="bg">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+
+
+    <div class="section-fluid">
+
+      <div class="accordion" id="accordionExample">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed text-black" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Our Mission
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>We promise financial security and protection for our clients, </strong>commitment and fairness to
+              our agents Respect and opportunity for our employees Increasing value and reward for our sharehotders We
+              are committed to bringing quality products to market while providing the best service at the lowest cost.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button text-black" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Our Vision
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>We want to be the insurance agency of choice,</strong> dedicated to educating, serving, and
+              protecting local families and businesses with the best insurance policies at the right price.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <svg class="slidt" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+    </div>
+
+    <style>
+      .accordion-button:hover {
+        background-color: #ffc0e2;
+      }
+
+      .accordion-item {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+  </div>
+
+  <!--fourth-container-->
+
+  <div class="hidden">
+
+    <div class="custom-shape-divider-top-1680608574">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+
+    <div class="q text-black">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 d-flex align-items-center">
+            <div class="text-center text-lg-start">
+              <h2 class="underline-on-hover fw-bold">Dedication and Experience</h2>
+              <p>At Insure Solutions, we take pride in providing personalized insurance coverage that fits your unique
+                needs. Our team of experienced professionals is dedicated to providing exceptional service and support,
+                and we're committed to making insurance simple and accessible for everyone.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/6195500_3156704.jpg" alt="Placeholder image" class="img-fluid floating-on-hover">
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @keyframes float {
+          0% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(-10px);
+          }
+
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .floating-on-hover:hover {
+          animation: float 1s ease-in-out infinite;
+        }
+
+        .underline-on-hover {
+          position: relative;
+          display: inline-block;
+        }
+
+        .underline-on-hover:hover {
+          text-decoration: underline;
+        }
+
+        .underline-on-hover::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 2px;
+          background-color: #1D9BF0;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .underline-on-hover:hover::after {
+          transform: scaleX(1);
+        }
+      </style>
+
+      <br><br><br><br><br>
+      <div class="div"><div class="border"></div></div>
+      <style>
+        .div {
+          background-color: black;
+          z-index: 33;
+          border-bottom: 4px solid black;
+          background: none;
+          width: 400px;
+          margin: auto;
+        }
+        .border {
+          visibility: hidden;
+        }
+      </style>
+      <br><br><br><br><br>
+
+    </div>
+
+    <div class="q text-black">
+
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex align-items-center">
+
+            <div class="text-center text-lg-start">
+
+              <h2 class="underline-on-hover fw-bold">We've got everything covered</h2>
+              <p>Whether you're looking for coverage for your home, car, business, or anything in between, we've got you
+                covered. Explore our wide range of insurance options and discover how we can help you protect what
+                matters most.</p>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <img src="assets/8620993_3959997.jpg" alt="Placeholder image" class="img-fluid floating-on-hover">
+          </div>
+
+        </div>
+
+      </div>
+
+      <style>
+        @keyframes float {
+          0% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(-10px);
+          }
+
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .floating-on-hover:hover {
+          animation: float 1s ease-in-out infinite;
+        }
+
+        .underline-on-hover {
+          position: relative;
+          display: inline-block;
+        }
+
+        .underline-on-hover:hover {
+          text-decoration: underline;
+        }
+
+        .underline-on-hover::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 2px;
+          background-color: #1D9BF0;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .underline-on-hover:hover::after {
+          transform: scaleX(1);
+        }
+      </style>
+
+    </div>
+
+    <div class="a custom-shape-divider-top-1680608574">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+
+    <div>
+
+      <div class="color-fluid">
+
+        <h3 class="text-white fw-bold text-decoration-underline">What customers have to say about us</h3>
+
+        <div class="card-deck me-5">
+
+          <div class="card text-center testimonial-card">
+            <div class="card-header">
+              Testimonial
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-decoration-underline">Wang Zhi</h5>
+              <p class="card-text fst-italic">"It's been really great working with customer service on all my insurance
+                needs. They really made the experience stress free. I would have been a wreck had I gone anywhere else
+                but InSure Solutions made the experience stress free, and I'm so thankful to them for their service."
+              </p>
+              <a href="about.html" class="btn btn-primary testimonial-btn">Learn more</a>
+            </div>
+            <div class="card-footer text-muted">
+              Senior Developer, Qui-Chang Associates.
+            </div>
+          </div>
+          <div class="card text-center testimonial-card">
+            <div class="card-header">
+              Testimonial
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-decoration-underline">Mark Brooks</h5>
+              <p class="card-text fst-italic">"I really appreciate all of your diligent work every year to get us
+                properly insured, it allows me to sleep well knowing we are well protected."</p>
+              <a href="about.html" class="btn btn-primary testimonial-btn">Learn more</a>
+            </div>
+            <div class="card-footer text-muted">
+              VP, Stilleto Analytics.
+            </div>
+          </div>
+          <div class="card text-center testimonial-card">
+            <div class="card-header">
+              Testimonial
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-decoration-underline">Stella Young</h5>
+              <p class="card-text fst-italic">"Excellent, prompt service! The kind of service that has the customer
+                first in mind!"</p>
+              <a href="about.html" class="btn btn-primary testimonial-btn">Learn more</a>
+            </div>
+            <div class="card-footer text-muted">
+              Engineer, BeWoke
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <style>
+          .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 0px 10px #888888;
+            transition: transform 0.5s, box-shadow 0.5s;
+            margin-bottom: 20px;
+          }
+
+          .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 20px #888888;
+          }
+
+          .testimonial-btn {
+            background-color: #343a40;
+            border: none;
+            transition: background-color 0.5s;
+          }
+
+          .testimonial-btn:hover {
+            background-color: #17a2b8;
+          }
+        </style>
+
+        <br><br><br>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--last-card-->
+
+  <div class="hidden">
+
+    <div class="card text-center m-5">
+      <h5 class="wang card-header text-black">24/7 Customer service</h5>
+      <div class="card-body">
+        <p class="card-text">We pride ourselves on our premium customer service, if we do not offer you a response in 24
+          hours, you are eligible for a free quote.</p>
+        <a href="contact.html" class="btn btn-outline-primary fw-bold rounded-pill mt-3">Contact Us</a>
+      </div>
+    </div>
+
+    <style>
+      .card-header {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      .card-body {
+        font-size: 1.2rem;
+      }
+
+      .btn-outline-primary {
+        border-color: #F957B0;
+        color: #F957B0;
+      }
+
+      .btn-outline-primary:hover {
+        background-color: #F957B0;
+        border-color: #F957B0;
+        color: #fff;
+      }
+
+      .rounded-pill {
+        border-radius: 50px;
+      }
+
+      .m-5 {
+        margin: 2rem;
+      }
+    </style>
+
+  </div>
+
+  <!--footer-->
+
+  <div>
+
+    <footer style="background-color: #f2f2f2; padding: 10px; text-align: center;">
+
+      <span style="font-family: Arial, sans-serif; font-size: 14px; color: #555;">
+        <a href="index.html" style="text-decoration: none; color: #555;">InSure</a> Solutions &copy; 2023. All rights
+        reserved.
+        <i class="far fa-registered" style="color: #555;"></i>
+        <br>
+        Phone: +1 (555) 123-4567 | Email: info@insuresolutions.com
+      </span>
+
+    </footer>
+
+    <style>
+      footer {
+        background: #F957B0;
+        margin-top: 50px;
+        padding: 15px 23px;
+        color: #fff;
+        text-align: center;
+      }
+
+      footer span a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer span a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+  </div>
+
+</body>
+
+</html>

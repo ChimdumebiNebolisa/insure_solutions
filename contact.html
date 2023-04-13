@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InSure Solutions - Insurance at your fingertips</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="assets/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-y6x1ULJjS5+5O5EfbZ5GYY59ssjsibj4liBJAXXkSyfAZxnoIDWE56i3f6G05lBd+2jKvU6RXWU6X9X6kI07cQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="contact.css">
+
+    <script defer src="fadescroll.js"></script>
+
+</head>
+
+<body>
+
+  <!--Scripts-->
+  <script src="cd.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <!--Cookie alert-->
+
+  <div>
+    <div class="cookie-alert fixed-bottom text-light text-center rounded-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-9">
+            This website uses cookies to ensure you get the best experience on our website. <a href="#" class="alert-link text-light" data-toggle="modal" data-target="#terms-modal">Learn more</a>
+          </div>
+          <div class="col-12 col-md-3">
+            <button id="cookie-btn" type="button" class="btn rounded-0">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <style>
+      .close {
+        background-color: #F957B0;
+        border: none;
+        padding: 10px;
+      }
+
+      .cookie-alert {
+        background-color: #F957B0;
+      }
+      #cookie-btn {
+        color: white;
+        font-weight: bolder;
+      }
+      #cookie-btn:hover {
+        background-color: white;
+        color: #F957B0;
+        font-weight: bolder;
+      }
+      .cookie-alert {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+      }
+      @media (min-width: 768px) {
+        .cookie-alert {
+          border-radius: 0;
+        }
+      }
+    </style>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="terms-modal" tabindex="-1" role="dialog" aria-labelledby="terms-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="terms-modal-label">Terms and Conditions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>By using this website, you agree to our terms and conditions.</p>
+            <p>Our insurance policies are subject to the terms and conditions outlined in the policy document. Please read the policy document carefully before purchasing any insurance policy.</p>
+            <p>If you have any questions or concerns, please contact us.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      var cookieAlert = document.querySelector('.cookie-alert');
+      var cookieBtn = document.querySelector('#cookie-btn');
+      cookieBtn.addEventListener('click', function () {
+        cookieAlert.style.display = 'none';
+      });
+    </script>
+  </div>
+
+  <!--Responsive Navigation Bar-->
+
+  <div>
+      
+    <nav class="fw-bold navbar expand-lg body-tertiary shadow p-3 mb-2 bg-white">
+        <div class="container-fluid">
+
+          <a class="navbar-brand logo" href="index.html">In<span class="logospan">Sure Solutions</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <div class="navbar-nav">
+              <a class="nav-link " href="about.html">About</a>
+              <a class="nav-link" href="pricing.html">Pricing</a>
+              <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+
+            <style>
+                .nav-link:hover {
+                  opacity: 2;
+                  color: #1D9BF0;
+                }
+            </style>
+
+          </div>
+
+        </div>
+    </nav>
+
+  </div>
+
+  <!--form-->
+
+  <div class="hidden">
+
+    <form id="myForm" action="https://getform.io/f/e00aaafb-6855-4fb1-a680-d2b47e461a30" method="POST" class="m-5 shadow-lg p-5">
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label fw-bold">Email address</label>
+        <input required name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="name@example.com" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Enter your message</label>
+        <textarea minlength="5" required name="textarea" class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: both;"></textarea>
+      </div>         
+    
+      <div class="mb-3">
+        <label for="phoneInput" class="form-label fw-bold">Phone Number</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Country Code</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-value="+1">USA (+1)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+1">Canada (+1)</a></li>
+              <<li><a class="dropdown-item" href="#" data-value="+44">UK (+44)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+33">France (+33)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+81">Japan (+81)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+86">China (+86)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+91">India (+91)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+254">Kenya (+254)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+27">South Africa (+27)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+61">Australia (+61)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+64">New Zealand (+64)</a></li>
+              <li><a class="dropdown-item" href="#" data-value="+64">Nigeria (+234)</a></li>
+            </ul>
+          </div>
+          <input type="hidden" name="_gotcha" style="display:none !important">
+          <input required name="number" class="form-control" id="phoneInput" placeholder="Phone Number" pattern="[0-9]+"/>
+        </div>
+      </div>
+      <script>
+      const phoneInput = document.getElementById('phoneInput');
+
+        phoneInput.addEventListener('input', function() {
+          const numericRegex = /^[0-9]+$/;
+          const inputValue = phoneInput.value;
+
+          if (!numericRegex.test(inputValue)) {
+            phoneInput.style.borderColor = 'red';
+          } else {
+            phoneInput.style.borderColor = '';
+          }
+      });
+
+      </script>      
+    
+      <button name="button" type="submit" class="btn btn-primary" id="submitBtn">
+        <script>
+          document.getElementById("myForm").reset();
+        </script>
+        Submit
+      </button>
+
+    </form>
+
+    <style>
+
+    form {
+      animation-name: float;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    </style>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+  </div>
+
+  <!--FAQ-->
+
+  <div class="hidden">
+
+    <div class="container">
+
+      <h2 class="text-center">FAQs <br><b></b></h2>
+
+      <div class="accordion" id="faqAccordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:#F957B0; color:#fff">
+              What types of insurance do you offer?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We offer a range of insurance products, including auto, home, renters, life, and health insurance. Contact us to learn more about our offerings and find the right coverage for your needs.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color:#F957B0; color:#fff">
+              How do I file a claim?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              To file a claim, simply contact our claims department by phone or email. We'll guide you through the process and help you get the compensation you deserve. You can also file a claim online through our website or mobile app.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color:#F957B0; color:#fff">
+              How can I save money on my insurance premiums?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We offer a range of discounts and savings opportunities to help you save money on your insurance premiums. Some of our discounts include safe driver discounts, multi-policy discounts, and discounts for bundling multiple types of insurance with us. Contact us to learn more about how you can save on your premiums.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color:#F957B0; color:#fff">
+              What is the difference between liability and comprehensive coverage?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Liability coverage protects you from financial liability if you are found to be at fault in an accident that causes bodily injury or property damage to others. Comprehensive coverage, on the other hand, covers damage to your own vehicle from non-collision incidents, such as theft, vandalism, or natural disasters.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+      
+    <script>
+
+        // add event listener to dropdown items
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(item => {
+
+          item.addEventListener('click', () => {
+
+            const countryCode = item.dataset.value;
+            document.querySelector('#phoneInput').value = countryCode;
+            document.querySelector('.dropdown-toggle').textContent = item.textContent;
+
+          });
+
+        });
+
+    </script>
+
+  </div>
+
+  <!--footer-->
+
+  <div>
+
+  <footer style="background-color: #f2f2f2; padding: 10px; text-align: center;">
+    <span style="font-family: Arial, sans-serif; font-size: 14px; color: #555;">
+        <a href="index.html" style="text-decoration: none; color: #555;">InSure</a> Solutions &copy; 2023. All rights reserved.
+        <i class="far fa-registered" style="color: #555;"></i>
+        <br>
+        Phone: +1 (555) 123-4567 | Email: info@insuresolutions.com
+    </span>
+  </footer> 
+
+  <style>
+    
+    footer {
+  background: #F957B0;
+  margin-top: 50px;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+  }
+
+  footer span a {
+  color: #fff;
+  text-decoration: none;
+  }
+
+  footer span a:hover {
+  text-decoration: underline;
+  }
+
+  </style>
+
+  </div>
+
+</body>
+
+</html>
